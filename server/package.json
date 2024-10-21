@@ -18,8 +18,8 @@
     "dotenv": "^10.0.0",
     "express": "^4.21.1",
     "express-unless": "^1.0.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.12",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.2",
     "nodeman": "^1.1.2",
     "server": "file:",
     "vercel": "^37.11.0"
