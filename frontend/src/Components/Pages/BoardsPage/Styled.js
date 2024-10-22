@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	background-image: url('https://unsplash.com/blog/content/images/2020/07/trello.jpg');
+	background-image: url('https://images.unsplash.com/photo-1693183910027-3b567c6abb2c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 	background-position: 50%;
 	background-size: cover;
 	height: 100vh;
