@@ -15,6 +15,7 @@ export const Container = styled.div`
     backgroundColor: "#F9FAFC",
   })}
 `;
+
 export const TrelloIconContainer = styled.div`
   cursor: pointer;
   padding-top: 2.5rem;
@@ -22,31 +23,31 @@ export const TrelloIconContainer = styled.div`
     paddingTop: "1rem",
   })}
 `;
+
 export const Icon = styled.img`
   display: block;
   height: 2.6rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2.5rem;
+  margin: 0 auto 2.5rem;
   ${md({
     marginBottom: "1rem",
   })}
 `;
+
 export const FormSection = styled.section`
   display: block;
   word-wrap: break-word;
 `;
+
 export const FormCard = styled.div`
   box-sizing: border-box;
-  display: block;
   max-width: 400px;
   width: fit-content;
   margin: 0 auto;
-  position: relative;
   background-color: #ffffff;
   border-radius: 3px;
   padding: 1.5rem 2.5rem;
-  box-shadow: rgb(0 0 0 / 10%) 0 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 
   ${md({
     maxWidth: "100%",
@@ -60,6 +61,7 @@ export const FormCard = styled.div`
     padding: "0.5rem 1rem",
   })}
 `;
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -67,15 +69,18 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
   ${md({
     gap: "0.7rem",
   })}
 `;
+
 export const Title = styled.h1`
   color: #5e6c84;
   font-size: 1rem;
   padding: 1rem;
 `;
+
 export const Input = styled.input`
   width: 100%;
   outline: none;
@@ -84,12 +89,13 @@ export const Input = styled.input`
   padding: 0.6rem;
   border: 2px solid #dfe1e6;
   background-color: #fafbfc;
+
   &:focus {
-    transition: background-color 0.2s ease-in-out 0s,
-      border-color 0.2s ease-in-out 0s;
-    border: 2px solid #68bcff;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    border-color: #68bcff;
   }
 `;
+
 export const Button = styled.button`
   background-color: #5aac44;
   width: 100%;
@@ -99,25 +105,26 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   font-weight: bold;
+
   &:hover {
     background: linear-gradient(to bottom, #61bd4f 0%, #5aac44 100%);
   }
 `;
+
 export const Hr = styled.hr`
   width: 100%;
-  display: block;
   height: 1px;
-  border: 0;
+  border: none;
   border-top: 1px solid hsl(0, 0%, 80%);
-  margin: 0.5 0;
-  padding: 0;
+  margin: 0.5rem 0;
 `;
 
 export const Link = styled.a`
   text-decoration: none;
   color: #0052cc;
   cursor: pointer;
-  font-size: ${(props) => props.fontSize};
+  font-size: ${(props) => props.fontSize || "1rem"};
+
   &:hover {
     color: #0052cc;
   }
