@@ -91,17 +91,6 @@ const Login = () => {
                 Sign up for an account
               </Link>
             </Form>
-
-            <hr style={{ margin: "1rem 0" }} />
-
-            <h2 style={{ textAlign: "center", marginBottom: "0.5rem" }}>ATLASSIAN</h2>
-            <div style={{ textAlign: "center", fontSize: "0.85rem",fontFamily:"sans-serif" }}>
-              <p>One account for Trello, Jira, Confluence, and more.</p>
-              <p>
-                This site is protected by reCAPTCHA and the Google<br />
-                Privacy Policy and Terms of Service apply.
-              </p>
-            </div>
           </FormCard>
         </FormSection>
       </Container>

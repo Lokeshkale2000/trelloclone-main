@@ -15,20 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// AUTH VERIFICATION AND UNLESS
 
-auth.verifyToken.unless = unless;
-
-app.use(
-	auth.verifyToken.unless({
-		path: [
-			{ url: '/user/login', method: ['POST'] },
-			{ url: '/user/register', method: ['POST'] },
-		],
-	})
-);
-
-//MONGODB CONNECTION
 
 mongoose.Promise = global.Promise;
 mongoose
