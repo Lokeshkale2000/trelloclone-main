@@ -7,7 +7,7 @@ const userRoute = require('./Routes/userRoute');
 const boardRoute = require('./Routes/boardRoute');
 const listRoute = require('./Routes/listRoute');
 const cardRoute = require('./Routes/cardRoute');
-const auth = require('./Middlewares/auth');
+const auth = require('./Routes/userRoute');
 
 dotenv.config();
 const app = express();
@@ -15,14 +15,22 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+auth.verifyToken.unless = unless;
+
+app.use(
+	auth.verifyToken.unless({
+		path: [
+			{ url: '/user/login', method: ['POST'] },
+			{ url: '/user/register', method: ['POST'] },
+		],
+	})
+);
+
 
 
 mongoose.Promise = global.Promise;
 mongoose
-	.connect(process.env.MONGO_URI, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	})
+	.connect(process.env.MONGO_URI)
 	.then(() => {
 		console.log('Database connection is succesfull!');
 	})

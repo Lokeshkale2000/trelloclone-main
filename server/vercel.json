@@ -10,7 +10,12 @@
       {
         "src": "/(.*)", 
         "dest": "/server.js"
+      },
+      {
+        "src": "/user/(.*)", 
+        "dest": "/server.js"
       }
+      
     ]
   
   }
